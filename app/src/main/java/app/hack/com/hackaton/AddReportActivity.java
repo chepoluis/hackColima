@@ -43,6 +43,8 @@ public class AddReportActivity extends AppCompatActivity {
     Button btnAddImage;
     Button btnUbication;
 
+    String titleI = "", descriptionI = "", typeI, lat = "", lng = "";
+
     // Firebase
     FirebaseDatabase db;
     DatabaseReference reports;
@@ -86,6 +88,15 @@ public class AddReportActivity extends AppCompatActivity {
         rbExtravio = findViewById(R.id.extravio);
         rbMaltrato = findViewById(R.id.maltrato);
 
+
+        titleI = getIntent().getExtras().getString("title");
+        descriptionI = getIntent().getExtras().getString("description");
+        lat = getIntent().getExtras().getString("lat");
+        lng = getIntent().getExtras().getString("lng");
+
+        title.setText(titleI);
+        description.setText(descriptionI);
+
         // Init firebase
         //userID = mAuth.getCurrentUser().getUid();
         db = FirebaseDatabase.getInstance();
@@ -100,6 +111,16 @@ public class AddReportActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openFileChooser();
+            }
+        });
+
+        btnUbication.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddReportActivity.this, MapsActivity.class);
+                intent.putExtra("title", title.getText().toString());
+                intent.putExtra("description", description.getText().toString());
+                startActivity(intent);
             }
         });
     }
@@ -177,6 +198,8 @@ public class AddReportActivity extends AppCompatActivity {
                         report.setType(type);
                         report.setDescription(description.getText().toString());
                         report.setPicture(miUrlOk);
+                        report.setLat(lat);
+                        report.setLng(lng);
                         report.setStatus("Pendiente");
                         report.setDate(currentDateTimeString);
                         userRef.child(report.getIdReport()).setValue(true);

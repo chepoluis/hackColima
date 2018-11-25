@@ -6,11 +6,13 @@ public class Reports {
     public Reports() {
     }
 
-    public Reports(String idReport, String title, String description, String picture, String status, String date, String type) {
+    public Reports(String idReport, String title, String description, String picture, String lat, String lng, String status, String date, String type) {
         this.idReport = idReport;
         this.title = title;
         this.description = description;
         this.picture = picture;
+        this.lat = lat;
+        this.lng = lng;
         this.status = status;
         this.date = date;
         this.type = type;

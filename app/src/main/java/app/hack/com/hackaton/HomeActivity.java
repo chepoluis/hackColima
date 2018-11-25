@@ -62,6 +62,7 @@ public class HomeActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.menu_add:
                 Intent intent = new Intent(HomeActivity.this, AddReportActivity.class);
+                intent.putExtra("title", "");
                 startActivity(intent);
                 break;
             default:
