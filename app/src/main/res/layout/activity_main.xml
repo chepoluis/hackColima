@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/perritos"
+    android:background="@drawable/perritocute"
     android:id="@+id/rootLayout"
     tools:context=".MainActivity">
 
@@ -17,7 +17,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:text="T I T U L O  C H I D O"
+            android:text="P E T  S O C I E T Y"
             android:textSize="36sp"
             android:textAlignment="center"
             android:textColor="@android:color/holo_blue_dark"

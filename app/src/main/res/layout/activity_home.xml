@@ -18,8 +18,41 @@
         app:navigationContentDescription="@string/abc_action_bar_up_description"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:title="Animalitos :3"
+        app:title="Pet Society"
         android:gravity="center"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/empty"
+        android:gravity="center_horizontal"
+        android:paddingTop="58dp"
+        android:text="Busca animalitos que necesiten ayuda :D"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/icon_empty"
+        app:srcCompat="@drawable/ic_sentiment_satisfied_black_24dp"
+        android:foregroundGravity="center"
+        android:layout_width="10dp"
+        android:layout_height="10dp" />
+
+    <LinearLayout
+        android:paddingTop="60dp"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/myRecycleView">
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/message"
@@ -29,7 +62,7 @@
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginStart="@dimen/activity_horizontal_margin"
         android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:text="@string/title_home"
+        android:text=""
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
