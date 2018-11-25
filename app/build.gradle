@@ -4,7 +4,7 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "app.hack.com.hackaton"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -44,6 +44,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging:17.3.2'
     implementation 'com.google.firebase:firebase-storage:16.0.2'
 
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.firebaseui:firebase-ui-database:4.1.0'
     implementation 'com.squareup.picasso:picasso:2.5.2'
 
     // AlertDialog
