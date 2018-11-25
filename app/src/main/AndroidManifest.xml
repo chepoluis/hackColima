@@ -18,7 +18,8 @@
         </activity>
         <activity
             android:name=".HomeActivity"
-            android:label="@string/title_activity_home"></activity>
+            android:label="@string/title_activity_home" />
+        <activity android:name=".AddReportActivity"></activity>
     </application>
 
 </manifest>
